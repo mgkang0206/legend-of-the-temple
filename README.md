@@ -11,6 +11,8 @@ All you need to do is add the following functionality to the app so we can ship 
 - Populate the mostGamesWon textview in StatsActivity
 - Populate the longestLosingStreak textview in StatsActivity (This is the hardest. Save for last)
 
+The places where the changes need to be made are marked as "TODO" in the code
+
 #### Bonus
 
 - Fix the bug when the submit button is clicked
