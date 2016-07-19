@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f5d40e1d88f3e390dd58eed269a691ef0add9c29">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7560af712d6836399666934d7d78478af3568660/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_b2e8d29adaea25321d1ea9dd02e14fea708805ae/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_e8de0b4e712542046e55eee1bb4eb8bc3036b356/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6abad9d19974b1a8bba0399b529b1b29d52aae23">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_87feeab2e80210e5e80bb805f84e6ad09e3836fb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_61237a9448ecc8f2851a3b455cdd1f3c6db9b656/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_670af5b386d5ca359a6f2f7952da47f2ad621e0c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_f53dd266e17ba716dc185e68baa6a1c56e57d162/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.2.1_7c088e65d808ccdaabc55a7cd788d93827ff2a29/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_1bd5632889fb6fa8a7fe33ca22debeb18b71871a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/Mauve3/Documents/git/generalAssembly/samples/cursors-intro-lesson/legends-code/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.2.1_90322af2517952cb5b9760c67433bfe5f3ea45b2/classes.dex" />
+    </item>
+
+</items>
