@@ -51,7 +51,7 @@ public class SQLDB extends SQLiteOpenHelper {
             }
             public String getCreateString(){
                 return "create table "
-                        + getTblName() + "( " + "_id integer primary key autoincrement, team integer not null,"
+                        + getTblName() + "( _id integer primary key autoincrement, team integer not null,"
                         + " points integer  not null, foundIdol integer not null, game integer not null );";
             }
             public boolean insertRow (SQLiteDatabase db, int team, int points, boolean foundIdol, int game)
@@ -72,7 +72,7 @@ public class SQLDB extends SQLiteOpenHelper {
             public Cursor getMostPoints(SQLiteDatabase db){
                 dbs.teams teams = new dbs.teams();
                 String query = "select " + teams.getTblName() + ".name, sum(" + getTblName() + ".points) as sum from " + getTblName() + ", "
-                        + teams.getTblName() + " where " + teams.getTblName() + "._id = " + getTblName() + ".team group by " + teams.getTblName() + ".name order by sum desc";
+                        + teams.getTblName() + " where (" + teams.getTblName() + "._id) - 1 = " + getTblName() + ".team group by " + teams.getTblName() + ".name order by sum desc";
                 Log.i("SQL", query);
 
                 Cursor res =  db.rawQuery( query, null );
@@ -92,8 +92,17 @@ public class SQLDB extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 5;
 
+    private static SQLDB instance;
+
+    public static SQLDB getInstance(Context context) {
+        if (instance == null) {
+            instance = new SQLDB(context);
+        }
+        return instance;
+    }
+
     //This creates the database
-    public SQLDB(Context context) {
+    private SQLDB(Context context) {
         super(context, DBNAME, null, DATABASE_VERSION);
     }
 
@@ -105,7 +114,8 @@ public class SQLDB extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void
+    onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.w(SQLDB.class.getName(), "Upgrading database from version " + oldVersion + " to " + newVersion + ", which will destroy all old data");
         db.execSQL("DROP TABLE IF EXISTS " + teams.getTblName());
         db.execSQL("DROP TABLE IF EXISTS " + games.getTblName());
@@ -135,7 +145,7 @@ public class SQLDB extends SQLiteOpenHelper {
     public ArrayList<String> getTeams(){
 
         ArrayList<String> teamList = new ArrayList<>();
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = teams.getData(db);
 
         cursor.moveToFirst();

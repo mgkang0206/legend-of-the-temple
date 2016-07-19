@@ -14,7 +14,7 @@ public class InitDB {
     }
 
     InitDB(Context self) {
-        db = new SQLDB(self);
+        db = SQLDB.getInstance(self);
 
         if (db.getTeams().size() == 0) {
             db.insertTeam("Red Jaguars");
