@@ -6,7 +6,7 @@ You have decided to create an app celebrating the 20th anniversary of Legends of
 ## Requirements:
 All you need to do is add the following functionality to the app so we can ship it:
 
-- Make sure that info scores aren't added to a game already in the database (in table games, column game)
+- Make sure that game scores aren't added to a game already in the database (in table games, column game)
 - Add a button to reset the database so we can add new things if we want
 - Populate the mostGamesWon textview in StatsActivity
 - Populate the longestLosingStreak textview in StatsActivity (This is the hardest. Save for last)
