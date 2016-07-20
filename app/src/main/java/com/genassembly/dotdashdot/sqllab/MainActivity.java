@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-/* TODO : Reset DB when button is clicked*/
 public class MainActivity extends AppCompatActivity {
 
     private Context self;
@@ -21,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         self = this;
+        SQLDB.getInstance(this).setContext(this);
 
         final InitDB db = new InitDB(this);
         final ListView listy = (ListView) findViewById(R.id.mainList);
@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (!gameEdit.getText().toString().isEmpty()) {
+                        if (SQLDB.getInstance(getBaseContext()).doesGameAlreadyExist(Integer.valueOf(gameEdit.getText().toString()))) {
+                            Toast toast = Toast.makeText(getBaseContext(), "Game already exists in database", Toast.LENGTH_LONG);
+                            toast.show();
+                        } else {
                         for (int i = 0; i < listy.getChildCount(); i++) {
                             View team = listy.getChildAt(i);
 
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.i("Main", "Printing...");
                         gameEdit.setText("");
                         db.getDB().printGames();
+                    }
                     } else {
                         Toast.makeText(self, "Game number not inserted!", Toast.LENGTH_LONG).show();
                     }
@@ -56,8 +61,22 @@ public class MainActivity extends AppCompatActivity {
             stats.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(self, StatsActivity.class);
-                    startActivity(i);
+                    if (db.getDB().getSumPoints().size() != 0) {
+                        Intent i = new Intent(self, StatsActivity.class);
+                        startActivity(i);
+                    } else {
+                        Toast.makeText(getBaseContext(), "No games in database", Toast.LENGTH_SHORT);
+                    }
+                }
+            });
+        }
+
+        Button dropTable = (Button) findViewById(R.id.drop_table);
+        if (dropTable != null) {
+            dropTable.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    SQLDB.getInstance(getBaseContext()).dropGames();
                 }
             });
         }

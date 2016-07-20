@@ -1,11 +1,7 @@
 package com.genassembly.dotdashdot.sqllab;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.TextView;
 
 public class StatsActivity extends AppCompatActivity {
@@ -21,10 +17,14 @@ public class StatsActivity extends AppCompatActivity {
         points.setText(db.getDB().getSumPoints().get(0));
 
         TextView gWon = (TextView) findViewById(R.id.mostGamesWon);
-        /* TODO : add the team with the most games won (Win = Top score for a particular game)*/
+        String winner = SQLDB.getInstance(this).getMostWins();
+        gWon.setText(winner);
 
         TextView longestLoseStreak = (TextView) findViewById(R.id.longestStreak);
-        /* TODO : add the team with the longest lose streak (Longest consecutive games gone without winning)*/
+        String loser = SQLDB.getInstance(this).getLosingStreak();
+        longestLoseStreak.setText(loser);
+
+        SQLDB.getInstance(this).getLosingStreak();
 
 
     }
